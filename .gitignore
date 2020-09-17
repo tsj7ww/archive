@@ -1,4 +1,18 @@
 # custom
+.ipynb_checkpoints/
+__pycache/
+*.pyc
+*.csv
+*.parquet
+*.dat
+*.pdf
+*.log
+*.zip
+data/
+artifacts/
+layers/
+layer/
+env/
 
 # jekyll
 _site/
