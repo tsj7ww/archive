@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%PREAMBLE%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%PAGE SPECIFICATIONS%
+\documentclass[12pt, times, oneside]{article}
+    \usepackage[margin=1.0in]{geometry}
+    \geometry{a4paper}
+\linespread{1.5}
+%%%%%%%%%%%%%%%%%%%%%%%
+%INDENTATION%
+\setlength{\parindent}{2em}
+    \usepackage{indentfirst}
+\setlength{\parskip}{1em}
+%%%%%%%%%%%%%%%%%%%%%%%
+%MATH SYMBOLS%
+\usepackage{amsmath}
+\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%
+%IMAGES%
+\usepackage{graphicx}
+    \usepackage{float}
+    \graphicspath{ {images/} }
+%%%%%%%%%%%%%%%%%%%%%%%
+%BIBLIOGRAPHY%
+\usepackage[
+backend=biber,
+style=chicago-authordate,
+citestyle=chicago-authordate
+]{biblatex}
+\bibliography{bibliography} % Must be a .bib file
+%THEN RUN: (1) pdflatex -> (2) biber -> (3) pdflatex
+%%%%%%%%%%%%%%%%%%%%%%%
+%APPENDIX%
+\usepackage[title]{appendix}
+    \usepackage{longtable}
+    \usepackage{caption}
+        \captionsetup[longtable]{%
+            labelfont={normalsize} ,
+            textfont={normalsize}     ,
+            position=top            ,
+            belowskip=0pt           ,
+            aboveskip=3pt
+            }
+    \usepackage{color}
+        \definecolor{codeeggplant}{rgb}{0.38, 0.25, 0.32}
+        \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+        \definecolor{codered}{rgb}{0.77, 0.12, 0.23}
+        \definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+        \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+    \usepackage{listings}
+        \lstdefinestyle{mystyle}{
+            backgroundcolor=\color{backcolour},   commentstyle=\color{codeeggplant},
+            keywordstyle=\color{cobalt},
+            numberstyle=\tiny\color{codegray},
+            stringstyle=\color{codered},
+            frame=top,frame=bottom,
+            basicstyle=\tiny,
+            captionpos=t,
+            breakatwhitespace=false,
+            breaklines=true,
+            keepspaces=true,
+            numbers=left,
+            numbersep=5pt,
+            showspaces=false,
+            showstringspaces=false,
+            showtabs=false,
+            tabsize=2
+            }
+        \lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%
+%LONG COMMENTS%
+\usepackage{comment}
+%%%%%%%%%%%%%%%%%%%%%%%
+%TITLE SPECIFICATIONS%
+\title{\normalsize{
+        THE IMPACT OF THE HYDE AMENDMENT \\
+        ON EDUCATION OUTCOMES OF THE MARGINAL CHILD \vspace{5em} \\
+        by \vspace{5em} \\
+        Trevor Jordan
+        }}
+\date{}
+    \usepackage{datetime}
+\author{}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+%%%%%%%%%%%TITLE & PREFACE%%%%%%%%%%%%%%
+\input{sections/title_preface.tex}
+%%%%%%%%%%%%%%%%INTRO%%%%%%%%%%%%%%%%%%%
+\input{sections/intro.tex}
+%%%%%%%%%%%%%%%%POLICY%%%%%%%%%%%%%%%%%%
+\input{sections/policy.tex}
+%%%%%%%%%%%%%%LIT_REVIEW%%%%%%%%%%%%%%%%
+\input{sections/lit_review.tex}
+%%%%%%%%%%%%%%%%%DATA%%%%%%%%%%%%%%%%%%%
+\input{sections/data.tex}
+%%%%%%%%%%EMPIRICAL STRATEGY%%%%%%%%%%%%
+\input{sections/empirical.tex}
+%%%%%%%%%%%%%%%RESULTS%%%%%%%%%%%%%%%%
+\input{sections/results.tex}
+%%%%%%%%%%%%%%%CONCLUSION%%%%%%%%%%%%%%%
+\input{sections/conclusion.tex}
+%%%%%%%%%%%%%%BIBLIOGRAPHY%%%%%%%%%%%%%%
+\nocite{*}
+\printbibliography[title={Bibliography}]
+    \newpage
+%%%%%%%%%%%%%%%%APPENDIX%%%%%%%%%%%%%%%%
+\begin{appendices}
+    \input{appendices/appendix_a.tex} % Data
+    \input{appendices/appendix_b.tex} % Regressions
+%    \input{appendices/appendix_c.tex} % Figures
+    \input{appendices/appendix_d.tex} % Code
+\end{appendices}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

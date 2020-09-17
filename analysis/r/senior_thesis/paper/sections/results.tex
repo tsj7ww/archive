@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%RESULTS%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+
+    A table (\ref{full_reg}) displays the coefficients from equations (\ref{reg1}) and (\ref{reg2}). A tables of the full regression outputs, including regressions excluding FEs, can be found in Appendix B.
+
+    \subsection{Regressions Output}
+        \begingroup\tiny
+        \begin{longtable}{ll|rr}
+        \caption{Full Regression Results} \\
+        \label{full_reg}
+        \\ [-4ex]\hline
+        \hline \\[-4ex]
+        & \multicolumn{2}{c}{\textit{Dependent variable: Educational Attainment}} \\
+        \cline{2-3}
+        \\[-4ex] & \multicolumn{2}{c}{Educational Attainment (Continuous)} \\ 
+        \\[-4ex] & (1) Population & (2) Enrollment\\
+        \hline \\[-4ex]
+            Hyde*Medicaid (by state population) & 0.008105$^{***}$ &  \\
+            & (0.000096) &  \\
+            Hyde*Medicaid (by state enrollment) &  & 0.001002$^{***}$ \\
+            &  & (0.00001) \\
+            \ldots&\ldots&\ldots\\
+            Constant & 376.478$^{***}$ & 391.711$^{***}$ \\
+            & (0.897) & (0.939) \\
+            \hline \\[-4ex]
+            Observations & 630,335 & 630,335 \\
+            R$^{2}$ & 0.285 & 0.288 \\
+            Adjusted R$^{2}$ & 0.285 & 0.288 \\
+            Residual Std. Error (df = 630272) & 1.769 & 1.765 \\
+            F Statistic (df = 62; 630272) & 4,054.023$^{***}$ & 4,117.638$^{***}$\\
+        \hline
+        \hline \\[-4ex]
+        \textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+        \end{longtable}
+        \endgroup
+
+    Both \textit{Hyde*Medicaid (by state population)} and \textit{Hyde*Medicaid (by state enrollment)} have positive coefficients with high levels of significance. Using these results, I reject the null hypothesis that the coefficient of the proxy variables is equal to zero, suggesting that the Hyde Amendment did have a statistically significant impact on education outcomes for the marginal child.
+
+
+
+    \subsection{Interpretation}
+        I use the follow equations to interpret the $\beta$ coefficients in the context of the marginal child's future educational attainment.
+
+            \begin{equation}\label{interpretation1}
+                \Delta Y = \beta*\Delta Medicaid \text{~~~ for Hyde==1}
+            \end{equation}
+
+        Equation (\ref{interpretation1}) interprets the impact of state Medicaid expenditures on educational attainment for the marginal child born after enactment of the Hyde Amendment.
+
+            \begin{equation}\label{interpretation2}
+                \Delta Y = \beta*\Delta Hyde*Medicaid_{i} \text{~~~ for Birthplace$_{i}$}
+            \end{equation}
+
+        Equation (\ref{interpretation2}) interprets the impact of the Hyde Amendment on educational attainment for the marginal child in a given state.
+
+        The following tables break down state Medicaid expenditures by population and by enrollment.
+
+
+            \begin{table}[H]
+                \caption{Breakdown of State Medicaid Expenditures (S.M.E.) by Population}
+                \centering\footnotesize{
+                \begin{tabular}{lcr}
+                \hline
+                S.M.E. Ranking & Medicaid by Population (by Enrollment) & State\\
+                \hline
+                Min & 0.00 (0.00) & Arizona\\
+                Min (not Arizona) & 13.25 (327.30) & Wyoming\\
+                25$^{th}$ Percentile & 40.20 (445.17) & Alabama\\
+                75$^{th}$ Percentile & 86.89 (705.99) & Michigan\\
+                Max & 217.22 (1393.38) & D.C.\\
+                \hline
+                \end{tabular}}
+            \end{table}
+
+            \begin{table}[H]
+                \caption{Breakdown of State Medicaid Expenditures (S.M.E.) by Enrollment}
+                \centering\footnotesize{
+                \begin{tabular}{lcr}
+                \hline
+                S.M.E Ranking & Medicaid by Enrollment (by Population) & State\\
+                \hline
+                Min & 0.00 (0.00) & Arizona\\
+                Min (not Arizona) & 314.44 (24.00) & Florida\\
+                25$^{th}$ Percentile & 532.61 (45.86) & Tennessee\\
+                75$^{th}$ Percentile & 854.82 (64.38) & New Jersey\\
+                Max & 1393.38 (217.22) & D.C.\\
+                \hline
+                \end{tabular}}
+            \end{table}
+
+        I use equation (\ref{interpretation1}) by comparing the state Medicaid expenditures between the 75$^{th}$ and 25$^{th}$ percentiles and between the max and min by population and by enrollment.
+
+        For example, I calculate the expected change in educational attainment for the marginal child due to differences in state Medicaid expenditures by population for the 75$^{th}$ and 25$^{th}$ percentiles as such:
+
+            \begin{equation}\label{interpretation3}
+                \Delta Y = (0.008105)*(\$86.69-\$13.25) = 0.60
+            \end{equation}
+
+        This result means that an increase in state Medicaid expenditures (around the time the Hyde Amendment passed) by \$73.44 per person predicts that children born after during the Hyde Amendment era will stay in school for 0.6 more years. The following table shows the interpretations for equation (\ref{interpretation1}).
+
+            \begin{table}[H]
+                \caption{Changes in Educational Attainment due to State Medicaid Expenditures (S.M.E.)}
+                \centering\footnotesize{
+                \begin{tabular}{lccr}
+                \hline
+                Differences in S.M.E. Rankings & By Population or Enrollment? & States & $\Delta$Edu\\
+                \hline
+                Max - Min (not Arizona) & Population & D.C. - WY & 1.65 \\
+                75$^{th}$ - 25$^{th}$ Percentile & Population & MI - AL & 0.60 \\
+                Max - Min (not Arizona) & Enrollment & D.C. - FL & 1.08 \\
+                75$^{th}$ - 25$^{th}$ Percentile & Enrollment & NJ - TN & 0.32 \\
+                \hline
+                \end{tabular}}
+            \end{table}
+
+
+        I use equation (\ref{interpretation2}) by comparing individuals born before and after the Hyde Amendment passed for a given state.
+
+        For example, I calculate the expected change in educational attainment for the marginal child due to the Hyde Amendment for the state in the 75$^{th}$ percentile in state Medicaid expenditures by population as such:
+
+            \begin{equation}\label{interpretation4}
+                \Delta Y = (0.008105)*(1)*(\$86.89) = 0.70
+            \end{equation}
+
+        This result means that individuals born after the Hyde Amendment passed in the state of Michigan are expected to stay in school for 0.7 more years. The following table shows the interpretations for equation (\ref{interpretation2}).
+
+            \begin{table}[H]
+                \caption{Changes in Educational Attainment due to the Hyde Amendment}
+                \centering\footnotesize{
+                \begin{tabular}{lccr}
+                \hline
+                S.M.E. Ranking & By Population or Enrollment? & State & $\Delta$Edu\\
+                \hline
+                Min (not Arizona) & Population & WY & 0.11 \\
+                25$^{th}$ Percentile & Population & AL & 0.33 \\
+                75$^{th}$ Percentile & Population & MI & 0.70 \\
+                Max & Population & D.C. & 1.76 \\
+                Min (not Arizona) & Enrollment & FL & 0.32 \\
+                25$^{th}$ Percentile & Enrollment & TN & 0.53 \\
+                75$^{th}$ Percentile & Enrollment & NK & 0.86 \\
+                Max & Enrollment & D.C. & 1.40 \\
+                \hline
+                \end{tabular}}
+            \end{table}

@@ -1,0 +1,46 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%EMPIRICAL%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Empirical Strategy}
+    \subsection{Economic Theory}
+        As seen in section 3.1, major changes in abortion access can bring rise to selection, in turn changing the demographics of future generations. Findings from Levitt, Gruber, and Ananat all suggest that positive selection resulting from the \textit{Roe v. Wade} ruling created positive changes in the demographics, leaving the average child born better off than the marginal child.
+
+        The Hyde Amendment, on the other hand, works against the ruling of \textit{Roe v. Wade}, opening up the realm for a different type of selection. To understand this, let us go back to scenario two from section 3.1. In the couple of years directly following \textit{Roe v. Wade}, Medicaid could have been the deciding factor to give individual (3) the option to have an abortion. With Medicaid as an option for funding, both individuals can get an abortion and no children are born into undesirable circumstances. After the Hyde Amendment, the Medicaid funding is no longer available and we return to scenario two resulting in negative selection.
+
+    \subsection{Regression Analysis}
+        To test the impact of the Hyde Amendment on selection and the marginal child, first, consider a simple linear regression of future educational attainment (of the child) on abortion access (of the mother).
+
+            \begin{equation}\label{ideal}
+                Future Education_{i} = \beta_{0} + \beta_{1}Abortion Access_{i}
+            \end{equation}
+
+        In this idealized model, $\beta_{1}$ refers to the impact that a mother's abortion access has on the education outcomes of the child. Previous research suggests that this $\beta_{1}$ is positive, generally meaning that increased abortion access results in positive selection. So, after the \textit{Roe v. Wade} ruling, abortion access increases therefore so would future education outcomes. Alternatively, after the Hyde Amendment, abortion access decreases, therefore, future education outcomes also decrease.
+
+        The variables in equation (\ref{ideal}), however, are not available. I reconstruct the model to best fit the data I have collected. I create an alternative measure for abortion access that internalizes the impact of the Hyde Amendment on abortion access. As a proxy for dependence on Medicaid funding, I use an interaction term consisting of a dummy for children whose births were impacted by the Hyde Amendment and state Medicaid expenditures per person or per enrollee. For the Hyde Amendment dummy variable, individuals who were born in 1977 or before are assigned a dummy equal to 1, all others are set equal to 0. I choose 1977/1978 as the cutoff year for two reasons. First, I do not have the exact birthdays of individuals in my sample. Therefore, because the bill was passed on September $30^{th}$, 1976, I must pick a specific year for when enforcement of the bill begins. September $30^{th}$, 1976 is closer to January $1^{st}$, 1977 than it is to January $1^{st}$, 1976, so I choose to model the bill's enforcement beginning in 1977. Second, I must model the time between when a child is conceived and when a child is born. Again, because I do not have the exact birthdays of my sample, assuming full terms for childbearing average around nine months, I must round up the time between conception and birth to a full year. Due to this, the 1978 cohort is the first to be impacted by the Hyde Amendment.
+
+        I use the following linear regression model as my baseline for analysis on the impact of the Hyde Amendment on Education Attainment:
+
+        \begin{equation}\label{reg1}
+            EDU_{ist} = \boldsymbol{\beta_{0}} + \boldsymbol{\beta_{1}}*H_{t}*M.pop_{s} + \boldsymbol{\beta_{2}}*X_{ist} + \boldsymbol{\beta_{3}}*Z_{st} + \boldsymbol{\beta_{4}}*u_{s} + \boldsymbol{\beta_{5}}*v_{t} + \varepsilon _{ist}
+        \end{equation}
+
+        \noindent where \\
+
+            \noindent\textbf{\textit{EDU}} is the categorical variable for educational attainment; \\
+            \textbf{\textit{H}} is a dummy variable representing whether or not an individual was impacted by the Hyde Amendment; \\
+            \textbf{\textit{M.pop}} is state Medicaid expenditures per state population; \\
+            \textbf{\textit{X}} refers to individual and household characteristics; \\
+            \textbf{\textit{Z}} refers to state-time varying variables; \\
+            \textbf{\textit{u}} refers to state fixed effects; \\
+            \textbf{\textit{v}} refers to year fixed effects; \\
+            $\boldsymbol{\varepsilon}$ is a random-error term.\\
+
+        I run a second linear regression after changing the interactive term for the Hyde Amendment.
+
+        \begin{equation}\label{reg2}
+            EDU_{ist} = \boldsymbol{\alpha_{0}} + \boldsymbol{\alpha_{1}}*H_{t}*M.enroll_{s} + \boldsymbol{\alpha_{2}}*X_{ist} + \boldsymbol{\alpha_{3}}*Z_{st} + \boldsymbol{\alpha_{4}}*u_{s} + \boldsymbol{\alpha_{5}}*v_{t} + \varepsilon _{ist}
+        \end{equation}
+
+        In equation (\ref{reg2}), I change \textit{M.pop} to \textit{M.enroll} and use data on state Medicaid expenditures by state enrollment.
+
+        The hypothesis tests focus on $\widehat{\beta_{1}}$ and $\widehat{\alpha_{1}}$. The Null Hypothesis states that $\widehat{\beta_{1}}$ and $\widehat{\alpha_{1}}$ = 0. The Alternative Hypothesis states that $\widehat{\beta_{1}}$ and $\widehat{\alpha_{1}}$ $\neq 0$.

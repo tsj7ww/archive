@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%DATA%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+    I use data from the American Community Survey, the Centers for Medicare \& Medicaid Studies, the Census Population Survey and the Federal Reserve Bank of St. Louis. I collect individual education attainment for the dependent variable, containing individuals ranging from 10$^{th}$ grade to 5\+ years of college. For the interaction term, I collect data for state Medicaid expenditures from 1980 and create a dummy variable indicating if an individual was conceived before or after the Hyde Amendment. Finally, I collect a set of control variables to mitigate any bias in the interaction term.\footnote{A full data description can be found in Appendix A.}
+
+    \subsection{Education}
+        I use the American Community Survey (ACS) to examine educational attainment because of the dataset's extensive sampling of the U.S. population and the comprehensive supplementary variables available about each individual. Using the Integrated Public Use Microdata Series (IPUMS), I extract my samples from the 2010 ACS to include individual educational attainment levels. Educational attainment is measured by a categorical variable ranging from no schooling to 5\+ years of college. I remove any individuals not old enough to drop out of school in order to refine my sample to observations relevant to the question. I then recode educational attainment to a continuous variable, ranging from individuals from 10$^{th}$ grade (10 years of schooling) to 5\+ years of college (18 years of schooling).\footnote{I assume that the average amount of post-graduate schooling is two years (a master's degree), making 5\+ years of college equivalent to 18 years of schooling.}
+
+        \begingroup\small
+        \begin{longtable}[h]{l|rrrrr}
+        \caption{Educational Attainment (Continuous) Summary Table}  \\
+        \label{edu_table}
+        \\[-4ex]\hline
+        \hline \\[-4ex]
+        Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\
+        \hline \\[-4ex]
+        Education (Continuous) & 630,335 & 13.107 & 2.092 & 10 & 18\\
+        \hline \\[-4ex]
+        \end{longtable}
+        \endgroup
+
+        \begingroup\footnotesize
+        \begin{longtable}{ll|rrr}
+        \caption{Educational Attainment (Discrete) Summary Table} \\
+        \label{edu2_table}
+         \textbf{Variable} & \textbf{Levels} & $\mathbf{n}$ & $\mathbf{\%}$ & $\mathbf{\sum \%}$ \\
+          \hline
+        Educational Attainment (Discrete) & Grade 10 & 48,475 & 7.7 & 7.7 \\
+        & Grade 11 & 54,060 & 8.6 & 16.3 \\
+        & Grade 12 & 218,524 & 34.7 & 50.9 \\
+        & 1 year of college & 124,716 & 19.8 & 70.7 \\
+        & 2 years of college & 43,600 & 6.9 & 77.7 \\
+        & 3 years of college & 0 & 0.0 & 77.7 \\
+        & 4 years of college & 104,547 & 16.6 & 94.2 \\
+        & 5+ years of college & 36,413 & 5.8 & 100.0 \\
+        \hline
+        & all & 630,335 & 100.0 &  \\
+        \hline
+        \hline
+        \end{longtable}
+        \endgroup
+
+        One statistic to note is that there are no individuals in the category of `3 years of college,' even prior to any data manipulation. I attribute this as a manifestation of the sunk-cost fallacy such that individuals either stop after two years of college or complete their bachelor's degree after four years.
+
+
+    \subsection{Medicaid \& Hyde Amendment}
+        The policy variable in this analysis is an interaction term between the Hyde Amendment and state Medicaid expenditures. The Hyde Amendment variable is a dummy variable equaling 1 if an individual was born after the amendment passed and 0 otherwise. I remove any individuals conceived in the pre-\textit{Roe v. Wade} era in order to focus on the time periods (1) between \textit{Roe v. Wade} and the Hyde Amendment and (2) after the Hyde Amendment. State Medicaid expenditures have two forms: state expenditures per population and state expenditures per Medicaid enrollees. Expenditure data was provided by the Centers for Medicare \& Medicaid Services (CMS), given in the form of yearly Medicaid expenditures from providers by state. Although the ideal year for this data to be collected from is 1976 (in order to align with the Hyde Amendment), the closest year the historical CMS data contained is 1980. The U.S. Census provided state population data in 1980. I indirectly calculated 1980 Medicaid Enrollment by using the 1981 March Census Population Survey (CPS) as a representative sample of the population's Medicaid enrollees, finding the proportion of individuals enrolled by state from the CPS and applying that proportion to the 1980 population to get Medicaid enrollment by state.
+
+        \begingroup\footnotesize
+        \begin{longtable}[h]{l|rrrrr}
+        \caption{Medicaid \& Hyde Amendment Summary Table}  \\
+        \label{medicaid.hyde_table}
+        \\[-4ex]\hline
+        \hline \\[-4ex]
+        Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\
+        \hline \\[-4ex]
+        Hyde Amendment & 630,335 & 0.830 & 0.376 & 0 & 1 \\
+        State Medicaid Expenditures (by state population) & 630,335 & 67.269 & 39.069 & 0.000 & 217.220 \\
+        State Medicaid Expenditures (by state enrollment) & 630,335 & 730.346 & 270.533 & 0.000 & 1,393.380 \\
+        \hline \\[-4ex]
+        \end{longtable}
+        \endgroup
+
+        Important values to note in this summary table are the minimum observations for state Medicaid expenditures. Although Medicaid was passed in 1965, it was not mandatory for states to join the program. Arizona was the last state to join Medicaid in 1982, whereas the all 49 other states had already joined by 1972. Because of this, Arizona had no Medicaid expenditures for the 1979-1980 fiscal year.
+
+    \subsection{Control Variables}
+        Control variables are obtained from the ACS and the Federal Reserve Bank of St. Louis. From the ACS, I collect variables for individual demographics, state fixed effects, and time fixed effects. I use sex and race as individual characteristics important to an individual's level of education. State fixed effects are included as the individual's birthplace (state of birth) and time fixed effects are included as the individual's birth year. I include state-time fixed effects by using unemployment rates (when the individual is 15 years old)\footnote{I use unemployment rates when the individual is 15 years old because that is the most relevant unemployment rate when an individual is deciding to stay in or drop out of high school.} collected from the Federal Reserve Bank of St. Louis.

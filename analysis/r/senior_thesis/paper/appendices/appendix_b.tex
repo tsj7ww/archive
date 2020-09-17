@@ -1,0 +1,357 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%APPENDIX B - Regressions%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ - ~~ Regressions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{FE Regressions}
+    \begingroup\tiny
+    \begin{longtable}{ll|rrr}
+    \caption{Absent \& State-Time FE Regression Results} \\
+    \label{app_noFE.s/t_reg} 
+    \\ [-4ex]\hline 
+    \hline \\[-4ex] 
+    & \multicolumn{2}{c}{\textit{Dependent variable: Educational Attainment}} \\ 
+    \cline{2-3} 
+    \\[-4ex] & \multicolumn{2}{c}{Educational Attainment (Continuous)} \\ 
+    \\[-4ex] & (1) Absent FE & (2) State-Time FE\\ 
+    \hline \\[-4ex] 
+        Hyde*Medicaid (by state population) & $-$0.003558$^{***}$ & $-$0.003382$^{***}$ \\ 
+        & (0.0001) & (0.0001) \\ 
+        Unemployment &  & $-$0.181$^{***}$ \\ 
+        &  & (0.002) \\ 
+        sex=Male & $-$0.410$^{***}$ & $-$0.412$^{***}$ \\ 
+        & (0.005) & (0.005) \\ 
+        race=Black & $-$0.707$^{***}$ & $-$0.684$^{***}$ \\ 
+        & (0.008) & (0.008) \\ 
+        race=American Indian or Alaska Native & $-$0.962$^{***}$ & $-$0.957$^{***}$ \\ 
+        & (0.024) & (0.024) \\ 
+        race=Chinese & 0.901$^{***}$ & 0.988$^{***}$ \\ 
+        & (0.035) & (0.035) \\ 
+        race=Japanese & 0.845$^{***}$ & 0.853$^{***}$ \\ 
+        & (0.070) & (0.069) \\ 
+        race=Other Asian or Pacific Islander & 0.237$^{***}$ & 0.301$^{***}$ \\
+        & (0.020) & (0.019) \\ 
+        race=Other race & $-$0.794$^{***}$ & $-$0.696$^{***}$ \\ 
+        & (0.015) & (0.015) \\ 
+        race=Two major races & $-$0.454$^{***}$ & $-$0.415$^{***}$ \\ 
+        & (0.016) & (0.016) \\ 
+        race=Three or more major races & $-$0.538$^{***}$ & $-$0.536$^{***}$ \\
+        & (0.050) & (0.049) \\ 
+        Constant & 13.634$^{***}$ & 14.641$^{***}$ \\ 
+        & (0.005) & (0.010) \\ 
+        \hline \\[-4ex] 
+        Observations & 630,335 & 630,335 \\ 
+        R$^{2}$ & 0.035 & 0.055 \\ 
+        Adjusted R$^{2}$ & 0.035 & 0.055 \\ 
+        Residual Std. Error & 2.055 (df = 630324) & 2.034 (df = 630323) \\ 
+        F Statistic & 2,317.093$^{***}$ (df = 10; 630324) & 3,322.252$^{***}$ (df = 11; 630323) \\ 
+    \hline 
+    \hline \\[-4ex] 
+    \textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+    \end{longtable}
+    \endgroup
+%%%%%%%%%%%%%%%%%%
+\newpage
+%%%%%%%%%%%%%%%%%%
+    \begingroup\tiny
+    \begin{longtable}{ll|rrr}
+    \caption{State \& Time FE Regression Results} \\
+    \label{app_state.time_reg} 
+    \\ [-4ex]\hline 
+    \hline \\[-4ex] 
+    & \multicolumn{2}{c}{\textit{Dependent variable: Educational Attainment}} \\ 
+    \cline{2-3} 
+    \\[-4ex] & \multicolumn{2}{c}{Educational Attainment (Continuous)} \\ 
+    \\[-4ex] & (1) State FE & (2) Time FE\\ 
+    \hline \\[-4ex] 
+        Hyde*Medicaid (by state population) & $-$0.012061$^{***}$ & 0.006265$^{***}$ \\ 
+        & (0.0001) & (0.0001) \\ 
+        Birth Year &  & $-$0.177$^{***}$ \\ 
+        &  & (0.0004) \\ 
+        sex=Male & $-$0.408$^{***}$ & $-$0.388$^{***}$ \\ 
+        & (0.005) & (0.005) \\ 
+        race=Black & $-$0.704$^{***}$ & $-$0.653$^{***}$ \\ 
+        & (0.008) & (0.007) \\ 
+        race=American Indian or Alaska Native & $-$0.793$^{***}$ & $-$0.761$^{***}$ \\ 
+        & (0.025) & (0.021) \\ 
+        race=Chinese & 0.872$^{***}$ & 0.964$^{***}$ \\ 
+        & (0.035) & (0.031) \\ 
+        race=Japanese & 0.906$^{***}$ & 0.732$^{***}$ \\ 
+        & (0.070) & (0.061) \\ 
+        race=Other Asian or Pacific Islander & 0.288$^{***}$ & 0.415$^{***}$ \\
+        & (0.020) & (0.017) \\ 
+        race=Other race & $-$0.735$^{***}$ & $-$0.667$^{***}$ \\ 
+        & (0.015) & (0.013) \\ 
+        race=Two major races & $-$0.393$^{***}$ & $-$0.259$^{***}$ \\ 
+        & (0.016) & (0.014) \\ 
+        race=Three or more major races & $-$0.472$^{***}$ & $-$0.365$^{***}$ \\
+        & (0.050) & (0.044) \\ 
+        birthplace=Alaska & 0.130$^{***}$ &  \\ 
+        & (0.048) &  \\ 
+        birthplace=Arizona & $-$0.668$^{***}$ &  \\ 
+        & (0.030) &  \\ 
+        birthplace=Arkansas & 0.033 &  \\ 
+        & (0.034) &  \\ 
+        birthplace=California & 0.456$^{***}$ &  \\ 
+        & (0.022) &  \\ 
+        birthplace=Colorado & 0.091$^{***}$ &  \\ 
+        & (0.030) &  \\ 
+        birthplace=Connecticut & 0.550$^{***}$ &  \\ 
+        & (0.031) &  \\ 
+        birthplace=Delaware & 0.353$^{***}$ &  \\ 
+        & (0.055) &  \\ 
+        birthplace=District of Columbia & 2.521$^{***}$ &  \\ 
+        & (0.044) &  \\ 
+        birthplace=Florida & $-$0.301$^{***}$ &  \\ 
+        & (0.024) &  \\ 
+        birthplace=Georgia & 0.023 &  \\ 
+        & (0.026) &  \\ 
+        birthplace=Hawaii & 0.212$^{***}$ &  \\ 
+        & (0.042) &  \\ 
+        birthplace=Idaho & $-$0.136$^{***}$ &  \\ 
+        & (0.042) &  \\ 
+        birthplace=Illinois & 0.665$^{***}$ &  \\ 
+        & (0.024) &  \\ 
+        birthplace=Indiana & $-$0.061$^{**}$ &  \\ 
+        & (0.026) &  \\ 
+        birthplace=Iowa & 0.337$^{***}$ &  \\ 
+        & (0.031) &  \\ 
+        birthplace=Kansas & 0.230$^{***}$ &  \\ 
+        & (0.033) &  \\ 
+        birthplace=Kentucky & 0.062$^{**}$ &  \\ 
+        & (0.029) &  \\ 
+        birthplace=Louisiana & 0.190$^{***}$ &  \\ 
+        & (0.028) &  \\ 
+        birthplace=Maine & 0.265$^{***}$ &  \\ 
+        & (0.043) &  \\ 
+        birthplace=Maryland & 0.504$^{***}$ &  \\ 
+        & (0.029) &  \\ 
+        birthplace=Massachusetts & 1.337$^{***}$ &  \\ 
+        & (0.027) &  \\ 
+        birthplace=Michigan & 0.537$^{***}$ &  \\ 
+        & (0.025) &  \\ 
+        birthplace=Minnesota & 0.626$^{***}$ &  \\ 
+        & (0.028) &  \\ 
+        birthplace=Mississippi & 0.213$^{***}$ &  \\ 
+        & (0.032) &  \\ 
+        birthplace=Missouri & 0.037 &  \\ 
+        & (0.027) &  \\ 
+        birthplace=Montana & 0.249$^{***}$ &  \\ 
+        & (0.048) &  \\ 
+        birthplace=Nebraska & 0.259$^{***}$ &  \\ 
+        & (0.037) &  \\ 
+        birthplace=Nevada & $-$0.477$^{***}$ &  \\ 
+        & (0.044) &  \\ 
+        birthplace=New Hampshire & 0.045 &  \\ 
+        & (0.045) &  \\ 
+        birthplace=New Jersey & 0.648$^{***}$ &  \\ 
+        & (0.026) &  \\ 
+        birthplace=New Mexico & $-$0.075$^{**}$ &  \\ 
+        & (0.038) &  \\ 
+        birthplace=New York & 1.697$^{***}$ &  \\ 
+        & (0.024) &  \\ 
+        birthplace=North Carolina & 0.030 &  \\ 
+        & (0.026) &  \\ 
+        birthplace=North Dakota & 0.412$^{***}$ &  \\ 
+        & (0.049) &  \\ 
+        birthplace=Ohio & 0.242$^{***}$ &  \\ 
+        & (0.024) &  \\ 
+        birthplace=Oklahoma & 0.067$^{**}$ &  \\ 
+        & (0.031) &  \\ 
+        birthplace=Oregon & $-$0.010 &  \\ 
+        & (0.032) &  \\ 
+        birthplace=Pennsylvania & 0.593$^{***}$ &  \\ 
+        & (0.024) &  \\ 
+        birthplace=Rhode Island & 0.821$^{***}$ &  \\ 
+        & (0.046) &  \\ 
+        birthplace=South Carolina & 0.132$^{***}$ &  \\ 
+        & (0.030) &  \\ 
+        birthplace=South Dakota & 0.449$^{***}$ &  \\ 
+        & (0.049) &  \\ 
+        birthplace=Tennessee & $-$0.032 &  \\ 
+        & (0.027) &  \\ 
+        birthplace=Texas & $-$0.108$^{***}$ &  \\ 
+        & (0.023) &  \\ 
+        birthplace=Utah & $-$0.060$^{*}$ &  \\ 
+        & (0.031) &  \\ 
+        birthplace=Vermont & 0.378$^{***}$ &  \\ 
+        & (0.059) &  \\ 
+        birthplace=Virginia & 0.122$^{***}$ &  \\ 
+        & (0.027) &  \\ 
+        birthplace=Washington & 0.074$^{***}$ &  \\ 
+        & (0.028) &  \\ 
+        birthplace=West Virginia & $-$0.026 &  \\ 
+        & (0.037) &  \\ 
+        birthplace=Wisconsin & 0.475$^{***}$ &  \\ 
+        & (0.027) &  \\ 
+        birthplace=Wyoming & $-$0.118$^{**}$ &  \\ 
+        & (0.058) &  \\ 
+        Constant & 13.735$^{***}$ & 363.632$^{***}$ \\ 
+        & (0.021) & (0.804) \\ 
+        \hline \\[-4ex] 
+        Observations & 630,335 & 630,335 \\ 
+        R$^{2}$ & 0.067 & 0.258 \\ 
+        Adjusted R$^{2}$ & 0.066 & 0.258 \\ 
+        Residual Std. Error & 2.021 (df = 630274) & 1.802 (df = 630323) \\ 
+        F Statistic & 749.196$^{***}$ (df = 60; 630274) & 19,966.220$^{***}$ (df = 11; 630323) \\ 
+    \hline 
+    \hline \\[-4ex] 
+    \textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+    \end{longtable}
+    \endgroup
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Full Regressions}
+    \begingroup\tiny
+    \begin{longtable}{ll|rrr}
+    \caption{Full Regression Results} \\
+    \label{app_full_reg} 
+    \\ [-4ex]\hline 
+    \hline \\[-4ex] 
+    & \multicolumn{2}{c}{\textit{Dependent variable: Educational Attainment}} \\ 
+    \cline{2-3} 
+    \\[-4ex] & \multicolumn{2}{c}{Educational Attainment (Continuous)} \\ 
+    \\[-4ex] & (1) Population & (2) Enrollment\\ 
+    \hline \\[-4ex] 
+        Hyde*Medicaid (by state population) & 0.008105$^{***}$ &  \\ 
+        & (0.000096) &  \\ 
+        Hyde*Medicaid (by state enrollment) &  & 0.001002$^{***}$ \\ 
+        &  & (0.00001) \\  
+        Birth Year & $-$0.183$^{***}$ & $-$0.190$^{***}$ \\ 
+        & (0.0005) & (0.0005) \\ 
+        Unemployment & $-$0.211$^{***}$ & $-$0.201$^{***}$ \\ 
+        & (0.002) & (0.002) \\ 
+        sex=Male & $-$0.390$^{***}$ & $-$0.390$^{***}$ \\ 
+        & (0.004) & (0.004) \\
+        race=Black & $-$0.650$^{***}$ & $-$0.649$^{***}$ \\ 
+        & (0.007) & (0.007) \\ 
+        race=American Indian or Alaska Native & $-$0.735$^{***}$ & $-$0.735$^{***}$ \\ 
+        & (0.022) & (0.022) \\ 
+        race=Chinese & 1.069$^{***}$ & 1.075$^{***}$ \\ 
+        & (0.030) & (0.030) \\ 
+        race=Japanese & 0.884$^{***}$ & 0.879$^{***}$ \\ 
+        & (0.061) & (0.061) \\ 
+        race=Other Asian or Pacific Islander & 0.504$^{***}$ & 0.508$^{***}$ \\
+        & (0.017) & (0.017) \\ 
+        race=Other race & $-$0.584$^{***}$ & $-$0.579$^{***}$ \\ 
+        & (0.013) & (0.013) \\ 
+        race=Two major races & $-$0.200$^{***}$ & $-$0.198$^{***}$ \\ 
+        & (0.014) & (0.014) \\ 
+        race=Three or more major races & $-$0.260$^{***}$ & $-$0.259$^{***}$ \\
+        & (0.044) & (0.044) \\ 
+        birthplace=Alaska & 0.058 & $-$0.195$^{***}$ \\ 
+        & (0.042) & (0.042) \\ 
+        birthplace=Arizona & 0.070$^{***}$ & 0.180$^{***}$ \\ 
+        & (0.026) & (0.026) \\ 
+        birthplace=Arkansas & $-$0.332$^{***}$ & $-$0.306$^{***}$ \\ 
+        & (0.029) & (0.029) \\ 
+        birthplace=California & $-$0.092$^{***}$ & 0.002 \\ 
+        & (0.020) & (0.019) \\ 
+        birthplace=Colorado & $-$0.021 & $-$0.221$^{***}$ \\ 
+        & (0.026) & (0.026) \\ 
+        birthplace=Connecticut & 0.259$^{***}$ & $-$0.024 \\ 
+        & (0.027) & (0.027) \\ 
+        birthplace=Delaware & $-$0.140$^{***}$ & $-$0.186$^{***}$ \\ 
+        & (0.048) & (0.048) \\ 
+        birthplace=District of Columbia & $-$0.142$^{***}$ & 0.237$^{***}$ \\ 
+        & (0.040) & (0.038) \\ 
+        birthplace=Florida & 0.035$^{*}$ & 0.042$^{**}$ \\ 
+        & (0.021) & (0.021) \\ 
+        birthplace=Georgia & $-$0.181$^{***}$ & $-$0.280$^{***}$ \\ 
+        & (0.023) & (0.023) \\ 
+        birthplace=Hawaii & $-$0.551$^{***}$ & $-$0.649$^{***}$ \\ 
+        & (0.037) & (0.037) \\ 
+        birthplace=Idaho & $-$0.122$^{***}$ & $-$0.222$^{***}$ \\ 
+        & (0.036) & (0.036) \\ 
+        birthplace=Illinois & 0.007 & $-$0.126$^{***}$ \\ 
+        & (0.021) & (0.021) \\ 
+        birthplace=Indiana & $-$0.167$^{***}$ & $-$0.383$^{***}$ \\ 
+        & (0.023) & (0.023) \\ 
+        birthplace=Iowa & $-$0.224$^{***}$ & $-$0.209$^{***}$ \\ 
+        & (0.027) & (0.027) \\ 
+        birthplace=Kansas & $-$0.182$^{***}$ & $-$0.295$^{***}$ \\ 
+        & (0.029) & (0.029) \\ 
+        birthplace=Kentucky & $-$0.210$^{***}$ & $-$0.209$^{***}$ \\ 
+        & (0.026) & (0.026) \\ 
+        birthplace=Louisiana & $-$0.006 & 0.015 \\ 
+        & (0.024) & (0.024) \\ 
+        birthplace=Maine & $-$0.372$^{***}$ & $-$0.362$^{***}$ \\ 
+        & (0.038) & (0.037) \\ 
+        birthplace=Maryland & $-$0.148$^{***}$ & $-$0.284$^{***}$ \\ 
+        & (0.025) & (0.025) \\ 
+        birthplace=Massachusetts & $-$0.256$^{***}$ & $-$0.261$^{***}$ \\ 
+        & (0.024) & (0.024) \\ 
+        birthplace=Michigan & $-$0.058$^{***}$ & 0.028 \\ 
+        & (0.022) & (0.021) \\ 
+        birthplace=Minnesota & $-$0.416$^{***}$ & $-$0.871$^{***}$ \\ 
+        & (0.025) & (0.025) \\ 
+        birthplace=Mississippi & 0.178$^{***}$ & 0.179$^{***}$ \\ 
+        & (0.028) & (0.028) \\ 
+        birthplace=Missouri & 0.015 & $-$0.015 \\ 
+        & (0.024) & (0.024) \\ 
+        birthplace=Montana & 0.007 & $-$0.255$^{***}$ \\ 
+        & (0.042) & (0.042) \\ 
+        birthplace=Nebraska & $-$0.320$^{***}$ & $-$0.501$^{***}$ \\ 
+        & (0.033) & (0.032) \\ 
+        birthplace=Nevada & $-$0.193$^{***}$ & $-$0.617$^{***}$ \\ 
+        & (0.039) & (0.039) \\ 
+        birthplace=New Hampshire & $-$0.026 & $-$0.188$^{***}$ \\ 
+        & (0.040) & (0.040) \\ 
+        birthplace=New Jersey & 0.248$^{***}$ & 0.074$^{***}$ \\ 
+        & (0.022) & (0.022) \\ 
+        birthplace=New Mexico & $-$0.042 & $-$0.008 \\ 
+        & (0.033) & (0.033) \\ 
+        birthplace=New York & $-$0.387$^{***}$ & $-$0.236$^{***}$ \\ 
+        & (0.022) & (0.021) \\ 
+        birthplace=North Carolina & $-$0.161$^{***}$ & $-$0.481$^{***}$ \\ 
+        & (0.023) & (0.023) \\ 
+        birthplace=North Dakota & $-$0.221$^{***}$ & $-$0.460$^{***}$ \\ 
+        & (0.043) & (0.043) \\ 
+        birthplace=Ohio & $-$0.032 & $-$0.222$^{***}$ \\ 
+        & (0.021) & (0.021) \\ 
+        birthplace=Oklahoma & $-$0.348$^{***}$ & $-$0.623$^{***}$ \\ 
+        & (0.027) & (0.027) \\ 
+        birthplace=Oregon & 0.019 & $-$0.100$^{***}$ \\ 
+        & (0.028) & (0.028) \\ 
+        birthplace=Pennsylvania & $-$0.057$^{***}$ & $-$0.086$^{***}$ \\ 
+        & (0.021) & (0.021) \\ 
+        birthplace=Rhode Island & $-$0.048 & $-$0.002 \\ 
+        & (0.041) & (0.040) \\ 
+        birthplace=South Carolina & 0.066$^{**}$ & $-$0.029 \\ 
+        & (0.026) & (0.026) \\ 
+        birthplace=South Dakota & $-$0.416$^{***}$ & $-$0.624$^{***}$ \\ 
+        & (0.043) & (0.043) \\ 
+        birthplace=Tennessee & $-$0.190$^{***}$ & $-$0.220$^{***}$ \\ 
+        & (0.024) & (0.024) \\ 
+        birthplace=Texas & $-$0.009 & $-$0.110$^{***}$ \\ 
+        & (0.020) & (0.020) \\ 
+        birthplace=Utah & $-$0.308$^{***}$ & $-$0.402$^{***}$ \\ 
+        & (0.028) & (0.027) \\ 
+        birthplace=Vermont & $-$0.370$^{***}$ & $-$0.377$^{***}$ \\ 
+        & (0.052) & (0.052) \\ 
+        birthplace=Virginia & $-$0.184$^{***}$ & $-$0.290$^{***}$ \\ 
+        & (0.024) & (0.024) \\ 
+        birthplace=Washington & $-$0.035 & $-$0.079$^{***}$ \\ 
+        & (0.024) & (0.024) \\ 
+        birthplace=West Virginia & 0.203$^{***}$ & 0.233$^{***}$ \\ 
+        & (0.032) & (0.032) \\ 
+        birthplace=Wisconsin & $-$0.388$^{***}$ & $-$0.423$^{***}$ \\ 
+        & (0.024) & (0.024) \\ 
+        birthplace=Wyoming & $-$0.044 & $-$0.118$^{**}$ \\ 
+        & (0.051) & (0.051) \\
+        Constant & 376.478$^{***}$ & 391.711$^{***}$ \\ 
+        & (0.897) & (0.939) \\ 
+        \hline \\[-4ex] 
+        Observations & 630,335 & 630,335 \\ 
+        R$^{2}$ & 0.285 & 0.288 \\ 
+        Adjusted R$^{2}$ & 0.285 & 0.288 \\ 
+        Residual Std. Error (df = 630272) & 1.769 & 1.765 \\ 
+        F Statistic (df = 62; 630272) & 4,054.023$^{***}$ & 4,117.638$^{***}$ \\  
+    \hline 
+    \hline \\[-4ex] 
+    \textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+    \end{longtable}
+    \endgroup
+\newpage
