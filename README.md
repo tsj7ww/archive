@@ -34,4 +34,4 @@ Repo for storing old, outdated projects.
 - When: Fall 2017
 
 ### ETL
-- N/A - relatively new to ETL at the moment.
+- N/A
