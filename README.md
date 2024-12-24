@@ -3,12 +3,12 @@ Repo for storing old projects.
 
 ### Python
 
-##### [Intro to Python](./python/kwest)
+##### [KWEST Trip Matcher](./python/kwest)
 - Description: Code to match Kellogg students to a KWEST trip based on submitted preferences.
 - Language(s): Python
 - When: Fall 2021
 
-##### [Intro to Python](./python/job_search)
+##### [Job Search Web Scraper](./python/job_search)
 - Description: Python web scraper running on AWS Lambda to pull job postings data from Indeed.com.
 - Language(s): Python
 - When: Fall 2020
