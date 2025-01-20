@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+   jupyter:
+      build: .
+      image: jupyter/datascience-notebook:py-latest
+      environment:
+        - JUPYTER_TOKEN=password
+        - JUPYTER_ENABLE_LAB=yes
+      volumes:
+        - .:/home/tjordan/housing
+      ports:
+        - 8888:8888
+      container_name: housing

@@ -1,0 +1,106 @@
+# Target
+Target:
+    topic: target
+    dtype: target
+    definition: n/a
+    field_name: SalePrice
+# House
+MSSubClass:
+    topic: house
+    dtype: cat
+    definition: n/a
+Utilities:
+    topic: house
+    dtype: cat
+    definition: n/a
+BldgType:
+    topic: house
+    dtype: cat
+    definition: n/a
+HouseStyle:
+    topic: house
+    dtype: cat
+    definition: n/a
+OverallQual:
+    topic: house
+    dtype: cat
+    definition: n/a
+OverallCond:
+    topic: house
+    dtype: cat
+    definition: n/a
+YearBuilt:
+    topic: house
+    dtype: cat
+    definition: n/a
+Exterior1st:
+    topic: house
+    dtype: cat
+    definition: n/a
+Exterior2nd:
+    topic: house
+    dtype: cat
+    definition: n/a
+ExterQual:
+    topic: house
+    dtype: cat
+    definition: n/a
+ExterCond:
+    topic: house
+    dtype: cat
+    definition: n/a
+Foundation:
+    topic: house
+    dtype: cat
+    definition: n/a
+Heating:
+    topic: house
+    dtype: cat
+    definition: n/a
+CentralAir:
+    topic: house
+    dtype: cat
+    definition: n/a
+Electrical:
+    topic: house
+    dtype: cat
+    definition: n/a
+1stFlrSF:
+    topic: house
+    dtype: int
+    definition: n/a
+2ndFlrSF:
+    topic: house
+    dtype: int
+    definition: n/a
+SaleCondition:
+    topic: house
+    dtype: cat
+    definition: n/a
+# Location
+MSZoning:
+    topic: location
+    dtype: cat
+    definition: Identifies the general zoning classification of the sale
+Neighborhood:
+    topic: location
+    dtype: cat
+    definition: n/a
+# Lot
+LotArea:
+    topic: lot
+    dtype: int
+    definition: Lot size in square feet
+# Sale
+SaleType:
+    topic: sale
+    dtype: cat
+    definition: n/a
+YrSold:
+    topic: sale
+    dtype: cat
+    definition: n/a
+MoSold:
+    topic: sale
+    dtype: cat
+    definition: n/a

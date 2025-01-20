@@ -3,6 +3,16 @@ Repo for storing old projects.
 
 ### Python
 
+##### [COVID Time Series Forecasting](./python/covid)
+- Description: Time series forecasting of COVID19 data in Richmond, VA.
+- Language(s): Python
+- When: Winter 2023
+
+##### [Housing Prediction](./python/housing)
+- Description: Regression analysis and prediction of housing price data.
+- Language(s): Python
+- When: Fall 2023
+
 ##### [KWEST Trip Matcher](./python/kwest)
 - Description: Code to match Kellogg students to a KWEST trip based on submitted preferences.
 - Language(s): Python
